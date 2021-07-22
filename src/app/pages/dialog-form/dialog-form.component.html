@@ -1,0 +1,935 @@
+<mat-toolbar class="d-flex justify-content-center" style="padding: 3%;">
+</mat-toolbar>
+
+<section style="width: 100%; height: 95vh;" class="d-flex justify-content-center">
+
+    <div style="height: 95vh; width: 86%" class="card">
+
+        <section class="d-flex justify-content-end">
+            <button class="btn btn-outline-primary" mat-dialog-close><b>X</b></button>
+        </section>
+
+        <mat-card class="d-flex justify-content-center">
+
+            <div style="height: 100%; width: 100%;">
+
+                <h1>REPORTE DE INCIDENCIA</h1>
+
+                <div class="d-flex justify-content-center">
+                    <span>Describir la incidencia presentada para el levantamiento de reporte y el seguimiento de los protocolos correspondientes.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Área de incidencia (Coloque el área a la cual pertenece)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Logística</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Ice Cream</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Merchandising</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Tipo de incidencia
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Asalto ( Robo con violencia).</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Robo ( Despojo de mercancía, cosas personales sin consentimiento).</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Vandalismo (Despojo de mercancía con violencia y daño físico).</mat-radio-button>
+                                    <mat-radio-button class="col" value="4">Impacto</mat-radio-button>
+                                    <mat-radio-button class="col" value="5">Enfermedad</mat-radio-button>
+                                    <mat-radio-button class="col" value="6">Volcadura</mat-radio-button>
+                                    <mat-radio-button class="col" value="7">Desvío de ruta</mat-radio-button>
+                                    <mat-radio-button class="col" value="8">Estadía no autorizada</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center">
+            <div style="height: 100%; width: 100%;">
+                <h1>ASALTO</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detallar la incidencia sufrida.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Efecto en: (Colocar si la incidencia tuvo impacto en usted, en su vehículo o en el inmueble) Puede colocar más de una opción.
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-checkbox class="col">Mi persona</mat-checkbox>
+                                <mat-checkbox class="col">Vehículo</mat-checkbox>
+                                <mat-checkbox class="col">Inmueble</mat-checkbox>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Nivel de grado: (Colocar el grado de daño sufrido en su persona)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Primer grado: Daño corporal grave, uso de arma contra usted)</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Segundo grado: Daño corporal leve, uso de arma contra usted)</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Tercer grado: Sin daño físico, daño mental, uso de arma como amenaza, nula intención de lastimar físicamente o intento fallido)</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Despojo de: (Colocar los objetos que fueron despojados de usted)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Cosas personales</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Mercancía</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Vehículo</mat-radio-button>
+                                    <mat-radio-button class="col" value="4">Otro</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Monto:
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 15%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Ubicación de la incidencia:
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Detalles extra de la incidencia: (Colocar la descripción de lo ocurrido durante el asalto)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center">
+
+            <div style="height: 100%; width: 100%;">
+
+                <h1>ROBO</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detallar la incidencia sufrida.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Despojo de: ( Colocar los objetos que fueron despojados de usted)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Mercancía</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Cosas personales</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Vehículo</mat-radio-button>
+                                    <mat-radio-button class="col" value="4">Otro</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Monto:
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 15%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Ubicación de la incidencia: (Colocar la ubicación de la incidencia)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Detalles extra: (Colocar la descripción de la incidencia)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center">
+
+            <div style="height: 100%; width: 100%; ">
+
+                <h1>VANDALISMO</h1>
+
+                <div class="d-flex justify-content-center">
+                    <span>Detallar la incidencia sufrida.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Nivel de daño: (Colocar el nivel de daño sufrido)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Primer grado: Daño corporal grave.</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Segundo grado: Daño corporal leve.</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Tercer grado: Sin daños corporales pero con daños mentales</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Despojo de: ( Colocar los objetos que fueron despojados de usted)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Mercancía</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Vehículo</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Mercancía y Vehículo</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Monto:
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 15%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Ubicación de la incidencia: (Colocar la ubicación de la incidencia)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Detalles extra: (Colocar la descripción de la incidencia)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center">
+
+            <div style="height: 100%; width: 100%; ">
+
+                <h1>IMPACTO</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Efecto en: (Colocar si la incidencia tuvo impacto solamente en el vehículo o impacto en usted y el vehículo ) </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Vehículo.</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">En mi persona y en vehículo.</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <!-- <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Despojo de: ( Colocar los objetos que fueron despojados de usted)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Mercancía</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Vehículo</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Mercancía y Vehículo</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Monto:
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="form-check">
+                                <input class="form-check-input" type="text">
+                                <label class="form-check-label">Cosas personales</label>
+                            </div>
+
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Ubicación de la incidencia:
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="form-check">
+                                <input class="form-check-input" type="text">
+                                <label class="form-check-label">Cosas personales</label>
+                            </div>
+
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Detalles extra: (Colocar la descripción de la incidencia)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="form-check">
+                                <input class="form-check-input" type="text">
+                                <label class="form-check-label">Cosas personales</label>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div> -->
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center">
+
+            <div style="height: 100%; width: 100%; margin-top: auto;">
+
+                <h1>DAÑOS DEL VEHICULO </h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Daños del vehículo:</mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Daños leves</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Daños graves</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Pérdida total</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Ubicación de la incidencia:
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Detalles extra de la incidencia (Colocar la descripción de la incidencia tal y como sucedió)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center">
+
+            <div style="height: 100%; width: 100%; ">
+
+                <h1>DAÑOS EN VEHÍCULO Y EN MI PERSONA</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Nivel de daño: (Colocar el nivel de daño sufrido)</mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Primer Grado: Daño corporal grave</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Segundo Grado: Daño coporal leve</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Tercer Grado: Sin daño corporal pero con daño mental.</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Nivel de daño en vehículo: (Colocar el nivel de daño sufrido en el vehículo)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Daños leves</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Daños graves</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Pérdida total</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Ubicación de la incidencia: (Colocar la ubicación de la incidencia)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Detalles extra de la incidencia (Colocar la descripción de la incidencia tal y como sucedió)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center">
+
+            <div style="height: 100%; width: 100%; ">
+
+                <h1>ENFERMEDAD</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Tipo de molestia: </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Resfriado.</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Malestar.</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Temperatura.</mat-radio-button>
+                                    <mat-radio-button class="col" value="4">Alergias.</mat-radio-button>
+                                    <mat-radio-button class="col" value="5">Dolor en el cuerpo.</mat-radio-button>
+                                    <mat-radio-button class="col" value="6">Otro</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Detalle extra (Colocar la descripción del malestar)
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center">
+
+            <div style="height: 100%; width: 100%;">
+
+                <h1>DESVÍO DE RUTA</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Motivo del desvío de ruta: </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Zona de riesgo.</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Incidencias en la ruta (Accidentes de terceros, cierre de vialidades, marchas, etc.)</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Emergencias en la ruta (Asalto, Robo, Vandalismo, Enfermedad)</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center ">
+
+            <div style="height: 100%; width: 100%;">
+
+                <h1>ZONA DE RIESGO</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Ubicación de la zona de riesgo: </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Detalles extra: (Colocar la descripción de la zona de riesgo) </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center ">
+
+            <div style="height: 100%; width: 100%; ">
+
+                <h1>INCIDENCIAS EN RUTA</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Tipo de incidencia en ruta:</mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Accidentes de terceros.</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Cierre de vialidades</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Reparación o mantenimiento de carreteras o autopistas.</mat-radio-button>
+                                    <mat-radio-button class="col" value="4">Marchas.</mat-radio-button>
+                                    <mat-radio-button class="col" value="5">Otro</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Ubicación de la incidencia: </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center ">
+
+            <div style="height: 100%; width: 100%;">
+
+                <h1>EMERGENCIAS EN LA RUTA</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Tipo de incidencia en ruta:</mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Asalto</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Robo</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Vandalismo</mat-radio-button>
+                                    <mat-radio-button class="col" value="4">Enfermedad</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center ">
+
+            <div style="height: 100%; width: 100%;">
+
+                <h1>ESTADÍA NO AUTORIZADA</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detallar la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Motivo de la estadía no autorizada: (Colocar el motivo de la estadía)</mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Falla mecánica</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Emergencia en la ruta (Asalto, robo, vandalismo, enfermedad)</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Incidencia en la ruta (Accidente de terceros, cierre de vialidades, etc.)</mat-radio-button>
+                                    <mat-radio-button class="col" value="4">Otro</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Ubicación de la estadía: (Colocar la ubicación de la estadía) </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center ">
+
+            <div style="height: 100%; width: 100%;">
+
+                <h1>FALLA MECÁNICA</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detallar la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Tipo de falla mecánica:</mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Motivo de la falla: </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+            </div>
+        </mat-card>
+
+        <mat-card class="d-flex justify-content-center ">
+
+            <div style="height: 100%; width: 100%;">
+
+                <h1>VOLCADURA</h1>
+
+                <div class="d-flex justify-content-center ">
+                    <span>Detalle de la incidencia.</span>
+                </div>
+                <hr>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Motivo de la volcadura: (Colocar si la volcadura fue provocada por usted o por un tercero) </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Provocada por mi.</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Provocada por un tercero</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Otro</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+
+                <div>
+                    <mat-accordion>
+                        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>Efecto en: (Colocar si la volcadura tuvo impacto solamente en su vehículo o en su persona)</mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button class="col" value="1">Vehículo.</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Vehículo y en mi persona.</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Otro</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</section>
