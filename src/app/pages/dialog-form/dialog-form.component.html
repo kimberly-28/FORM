@@ -9,6 +9,8 @@
             <button class="btn btn-outline-primary" mat-dialog-close><b>X</b></button>
         </section>
 
+        <!-- REPORTE DE INCIDENCIA -->
+
         <mat-card class="d-flex justify-content-center">
 
             <div style="height: 100%; width: 100%;">
@@ -33,6 +35,8 @@
                                     <mat-radio-button class="col" value="1">Logística</mat-radio-button>
                                     <mat-radio-button class="col" value="2">Ice Cream</mat-radio-button>
                                     <mat-radio-button class="col" value="3">Merchandising</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Ejecutivos</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">VP</mat-radio-button>
                                 </mat-radio-group>
                             </div>
                         </mat-expansion-panel>
@@ -57,6 +61,7 @@
                                     <mat-radio-button class="col" value="6">Volcadura</mat-radio-button>
                                     <mat-radio-button class="col" value="7">Desvío de ruta</mat-radio-button>
                                     <mat-radio-button class="col" value="8">Estadía no autorizada</mat-radio-button>
+                                    <mat-radio-button class="col" value="0">Merodeo</mat-radio-button>
                                 </mat-radio-group>
                             </div>
                         </mat-expansion-panel>
@@ -66,6 +71,8 @@
             </div>
 
         </mat-card>
+
+        <!-- ASALTO -->
 
         <mat-card class="d-flex justify-content-center">
             <div style="height: 100%; width: 100%;">
@@ -104,9 +111,9 @@
 
                             <div>
                                 <mat-radio-group aria-label="Select an option">
-                                    <mat-radio-button class="col" value="1">Primer grado: Daño corporal grave, uso de arma contra usted)</mat-radio-button>
-                                    <mat-radio-button class="col" value="2">Segundo grado: Daño corporal leve, uso de arma contra usted)</mat-radio-button>
-                                    <mat-radio-button class="col" value="3">Tercer grado: Sin daño físico, daño mental, uso de arma como amenaza, nula intención de lastimar físicamente o intento fallido)</mat-radio-button>
+                                    <mat-radio-button class="col" value="1">Primer grado: (Daño corporal grave, uso de arma contra usted)</mat-radio-button>
+                                    <mat-radio-button class="col" value="2">Segundo grado: (Daño corporal leve, uso de arma contra usted)</mat-radio-button>
+                                    <mat-radio-button class="col" value="3">Tercer grado: (Sin daño físico, daño mental, uso de arma como amenaza, nula intención de lastimar físicamente o intento fallido)</mat-radio-button>
                                 </mat-radio-group>
                             </div>
                         </mat-expansion-panel>
@@ -140,11 +147,11 @@
                         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    Monto:
+                                    Monto en Pesos Mexicanos:
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
                             <div>
-                                <input type="text" style="width: 15%;">
+                                $ <input type="text" style="width: 15%;">
                             </div>
                         </mat-expansion-panel>
                     </mat-accordion>
@@ -183,6 +190,8 @@
             </div>
         </mat-card>
 
+        <!-- ROBO -->
+
         <mat-card class="d-flex justify-content-center">
 
             <div style="height: 100%; width: 100%;">
@@ -219,11 +228,11 @@
                         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    Monto:
+                                    Monto en Pesos Mexicanos:
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
                             <div>
-                                <input type="text" style="width: 15%;">
+                                $ <input type="text" style="width: 15%;">
                             </div>
                         </mat-expansion-panel>
                     </mat-accordion>
@@ -263,6 +272,8 @@
             </div>
 
         </mat-card>
+
+        <!-- VANDALISMO -->
 
         <mat-card class="d-flex justify-content-center">
 
@@ -318,11 +329,11 @@
                         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                             <mat-expansion-panel-header>
                                 <mat-panel-title>
-                                    Monto:
+                                    Monto en Pesos Mexicanos:
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
                             <div>
-                                <input type="text" style="width: 15%;">
+                                $ <input type="text" style="width: 15%;">
                             </div>
                         </mat-expansion-panel>
                     </mat-accordion>
@@ -360,6 +371,8 @@
 
             </div>
         </mat-card>
+
+        <!-- IMPACTO -->
 
         <mat-card class="d-flex justify-content-center">
 
@@ -461,6 +474,8 @@
             </div>
         </mat-card>
 
+        <!-- DAÑOS DEL VEHICULO -->
+
         <mat-card class="d-flex justify-content-center">
 
             <div style="height: 100%; width: 100%; margin-top: auto;">
@@ -522,6 +537,8 @@
 
             </div>
         </mat-card>
+
+        <!-- DAÑOS EN VEHÍCULO Y EN MI PERSONA -->
 
         <mat-card class="d-flex justify-content-center">
 
@@ -603,6 +620,8 @@
             </div>
         </mat-card>
 
+        <!-- ENFERMEDAD -->
+
         <mat-card class="d-flex justify-content-center">
 
             <div style="height: 100%; width: 100%; ">
@@ -652,6 +671,8 @@
             </div>
         </mat-card>
 
+        <!-- DESVÍO DE RUTA -->
+
         <mat-card class="d-flex justify-content-center">
 
             <div style="height: 100%; width: 100%;">
@@ -682,6 +703,8 @@
 
             </div>
         </mat-card>
+
+        <!-- ZONA DE RIESGO -->
 
         <mat-card class="d-flex justify-content-center ">
 
@@ -722,6 +745,8 @@
 
             </div>
         </mat-card>
+
+        <!-- INCIDENCIAS EN RUTA -->
 
         <mat-card class="d-flex justify-content-center ">
 
@@ -768,6 +793,8 @@
             </div>
         </mat-card>
 
+        <!-- EMERGENCIAS EN LA RUTA -->
+
         <mat-card class="d-flex justify-content-center ">
 
             <div style="height: 100%; width: 100%;">
@@ -799,6 +826,8 @@
 
             </div>
         </mat-card>
+
+        <!-- ESTADÍA NO AUTORIZADA -->
 
         <mat-card class="d-flex justify-content-center ">
 
@@ -845,6 +874,8 @@
             </div>
         </mat-card>
 
+        <!-- FALLA MECÁNICA -->
+
         <mat-card class="d-flex justify-content-center ">
 
             <div style="height: 100%; width: 100%;">
@@ -884,6 +915,8 @@
 
             </div>
         </mat-card>
+
+        <!-- VOLCADURA -->
 
         <mat-card class="d-flex justify-content-center ">
 
